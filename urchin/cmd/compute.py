@@ -1,3 +1,8 @@
+from urchin import service
+
 
 def main():
-    pass
+
+    server = service.Service.create('compute')
+    service.serve(server)
+    service.wait()
